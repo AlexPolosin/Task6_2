@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car</title>
+</head>
+<body>
+List of Cars!
+<table>
+<thead>
+<tr>
+    <th scope="model">Model</th>
+    <th scope="series">Series</th>
+    <th scope="color">Color</th>
+</tr>
+</thead>
+    <tbody>
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.getModel()}"/>
+        <td th:text="${car.getSeries()}"/>
+        <td th:text="${car.getColor()}"/>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
