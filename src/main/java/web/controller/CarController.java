@@ -20,16 +20,6 @@ public class CarController {
     public String getWebCars(@RequestParam(value = "count", defaultValue = "5") int count
             , Model model) {
         List<Car> cars = new ArrayList<>();
-        Car car1 = new Car("BMW", 4 , "Black");
-        Car car2 = new Car("Audi", 5 , "Blue");
-        Car car3 = new Car("MB", 2 , "Green");
-        Car car4 = new Car("Renault", 3 , "Red");
-        Car car5 = new Car("Honda", 1 , "White");
-        cars.add(car1);
-        cars.add(car2);
-        cars.add(car3);
-        cars.add(car4);
-        cars.add(car5);
         cars = carService.getListCars(cars, count);
         model.addAttribute("cars", cars);
         return "cars";
